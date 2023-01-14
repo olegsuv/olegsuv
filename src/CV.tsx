@@ -1,4 +1,4 @@
-import { Button, Container, Link, Typography } from "@mui/material";
+import { Button, Link, Typography } from "@mui/material";
 import CVFile from "./cv.pdf";
 import DownloadIcon from "@mui/icons-material/Download";
 import React from "react";
@@ -19,11 +19,9 @@ export function CV() {
       >
         Latest available CV:
       </Typography>
-      <Container>
-        <Document file={CVFile}>
-          <Page pageNumber={1} size="A4" />
-        </Document>
-      </Container>
+      <Document file={CVFile}>
+        <Page pageNumber={1} size="A4" />
+      </Document>
       <Button
         startIcon={<DownloadIcon />}
         href={CVFile}
