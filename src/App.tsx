@@ -1,26 +1,22 @@
 import React from "react";
-import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-import DownloadIcon from "@mui/icons-material/Download";
-import CV from "./cv.pdf";
 import {
   AppBar,
-  Button,
   Container,
   Grid,
   Link,
   Toolbar,
   Typography,
 } from "@mui/material";
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-
-const CV_Version = "12.2022";
+import "./App.scss";
+import { Follow } from "./Follow";
+import { CV } from "./CV";
 
 function App() {
   return (
     <React.Fragment>
-      <AppBar position="fixed" color="primary" elevation={0}>
+      <AppBar position="static" color="primary" elevation={0}>
         <Toolbar sx={{ flexWrap: "wrap" }}>
           <Typography variant="h4" color="inherit" noWrap sx={{ flexGrow: 1 }}>
             Oleg Suvorov
@@ -58,35 +54,11 @@ function App() {
       </AppBar>
       <Container disableGutters component="main" sx={{ mt: 8 }}>
         <Grid container spacing={2}>
-          <Grid item xs={12} md={8}>
-            <Typography variant="h5" sx={{ my: 3 }}>
-              CV Senior Frontend Developer Oleg Suvorov {CV_Version}:
-            </Typography>
-            <Container
-              sx={{
-                p: 0,
-                mb: 4,
-                border: (theme) => `1px solid ${theme.palette.primary.main}`,
-              }}
-            >
-              <Document file={CV}>
-                <Page pageNumber={1} />
-              </Document>
-            </Container>
-            <Button
-              startIcon={<DownloadIcon />}
-              href={CV}
-              component={Link}
-              variant="contained"
-              download={`CV Senior Frontend Developer Oleg Suvorov ${CV_Version}.pdf`}
-            >
-              Download CV
-            </Button>
-          </Grid>{" "}
-          <Grid item xs={12} md={4}>
-            <Typography variant="h5" sx={{ my: 3 }}>
-              Demo test tasks:
-            </Typography>
+          <Grid item>
+            <CV />
+          </Grid>
+          <Grid item>
+            <Follow />
           </Grid>
         </Grid>
       </Container>
