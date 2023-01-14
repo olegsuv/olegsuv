@@ -15,6 +15,7 @@ import AddToQueueIcon from "@mui/icons-material/AddToQueue";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import CoPresentIcon from "@mui/icons-material/CoPresent";
+import TelegramIcon from "@mui/icons-material/Telegram";
 
 interface GetListItemButtonProps {
   URL: string;
@@ -55,6 +56,7 @@ export function Follow() {
         <GetListItemButton URL="polywork.com/oleg_suvorov" Icon={AppsIcon} />
         <GetListItemButton URL="angel.co/u/suvorov-oleg" Icon={CoPresentIcon} />
         <GetListItemButton URL="calendly.com/olegsuv" Icon={AddToQueueIcon} />
+        <GetListItemButton URL="t.me/olegsuv_ua" Icon={TelegramIcon} />
         <GetListItemButton URL="facebook.com/olegsuv.ua" Icon={FacebookIcon} />
         <GetListItemButton
           URL="instagram.com/oleg.suvorov"
