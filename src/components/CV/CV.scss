@@ -1,0 +1,18 @@
+.react-pdf {
+  &__Document {
+    box-shadow: 4px 4px 16px gray;
+    display: inline-block;
+  }
+
+  @media screen and (max-width: 767px) {
+    &__Page__canvas {
+      max-width: 100%;
+      height: auto !important;
+    }
+
+    &__Page__textContent,
+    &__Page__annotations {
+      display: none;
+    }
+  }
+}

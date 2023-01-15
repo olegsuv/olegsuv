@@ -9,7 +9,7 @@ import { GetListItemButton } from "./GetListItemButton";
 export function Tasks() {
   return (
     <>
-      <Typography variant="h4" color="primary" noWrap sx={{ flexGrow: 1 }}>
+      <Typography variant="h4" color="primary" sx={{ flexGrow: 1 }}>
         Demo of solved test tasks:
       </Typography>
       <List component="nav">

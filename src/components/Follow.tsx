@@ -14,7 +14,7 @@ import { GetListItemButton } from "./GetListItemButton";
 export function Follow() {
   return (
     <>
-      <Typography variant="h4" color="primary" noWrap sx={{ flexGrow: 1 }}>
+      <Typography variant="h4" color="primary" sx={{ flexGrow: 1 }}>
         Add • connect • follow me:
       </Typography>
       <List component="nav">

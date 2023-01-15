@@ -1,8 +1,9 @@
 import { Button, Link } from "@mui/material";
-import CVFile from "../cv.pdf";
+import CVFile from "../../cv.pdf";
 import DownloadIcon from "@mui/icons-material/Download";
 import React from "react";
 import { Document, Page, pdfjs } from "react-pdf";
+import "./CV.scss";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 export function CV() {

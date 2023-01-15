@@ -4,7 +4,7 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import { Container, Grid } from "@mui/material";
 import "./App.scss";
 import { Follow } from "../Follow";
-import { CV } from "../CV";
+import { CV } from "../CV/CV";
 import { Tasks } from "../Tasks";
 import { TechStack } from "../TechStack";
 

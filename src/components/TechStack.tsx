@@ -10,7 +10,7 @@ function CustomChip({ label, href }) {
 export function TechStack() {
   return (
     <>
-      <Typography variant="h4" color="primary" noWrap sx={{ flexGrow: 1 }}>
+      <Typography variant="h4" color="primary" sx={{ flexGrow: 1 }}>
         Tech stack of this website:
       </Typography>
       <Stack direction="row" flexWrap="wrap" spacing={0} sx={{ gap: 2, mt: 2 }}>
