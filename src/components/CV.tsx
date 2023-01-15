@@ -1,5 +1,5 @@
 import { Button, Link } from "@mui/material";
-import CVFile from "./cv.pdf";
+import CVFile from "../cv.pdf";
 import DownloadIcon from "@mui/icons-material/Download";
 import React from "react";
 import { Document, Page, pdfjs } from "react-pdf";
@@ -19,6 +19,7 @@ export function CV() {
         download={CV_string}
         sx={{
           mb: 2,
+          textTransform: "none",
         }}
       >
         Download "{CV_string}"

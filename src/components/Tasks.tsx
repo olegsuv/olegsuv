@@ -4,7 +4,7 @@ import InputIcon from "@mui/icons-material/Input";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import GridViewIcon from "@mui/icons-material/GridView";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
-import { GetListItemButton } from "./components/GetListItemButton";
+import { GetListItemButton } from "./GetListItemButton";
 
 export function Tasks() {
   return (
