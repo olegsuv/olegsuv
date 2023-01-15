@@ -9,8 +9,8 @@ import { Tasks } from "../../Tasks";
 
 function App() {
   return (
-    <Container disableGutters component="main" sx={{ mt: 4 }}>
-      <Grid container spacing={2}>
+    <Container component="main" sx={{ mt: 4 }}>
+      <Grid container spacing={4}>
         <Grid item>
           <CV />
         </Grid>
