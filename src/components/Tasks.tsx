@@ -1,5 +1,5 @@
 import React from "react";
-import { List, Typography } from "@mui/material";
+import { List } from "@mui/material";
 import InputIcon from "@mui/icons-material/Input";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import GridViewIcon from "@mui/icons-material/GridView";
@@ -7,13 +7,12 @@ import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import CollectionsIcon from "@mui/icons-material/Collections";
 import LocalMoviesIcon from "@mui/icons-material/LocalMovies";
 import { GetListItemButton } from "./GetListItemButton";
+import Title from "./common/Title";
 
 export function Tasks() {
   return (
     <>
-      <Typography variant="h4" color="primary" sx={{ flexGrow: 1 }}>
-        Demo of solved test tasks:
-      </Typography>
+      <Title>Demo of solved test tasks:</Title>
       <List component="nav">
         <GetListItemButton
           URL="github.com/olegsuv/react-checkers"

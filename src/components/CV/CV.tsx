@@ -1,16 +1,44 @@
-import { Button, Link } from "@mui/material";
-import CVFile from "../../cv.pdf";
+import { Button, Link, Pagination, Stack } from "@mui/material";
 import DownloadIcon from "@mui/icons-material/Download";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import "./CV.scss";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-export function CV() {
-  const CV_Version = "01.2023";
-  const CV_string = `CV Senior Frontend Developer Oleg Suvorov ${CV_Version}.pdf`;
+export function CV({ fileLength }) {
+  const [CVFile, setCVFile] = useState(null);
+  const [totalPages, setTotalPages] = useState(0);
+  const [pageNumber, setPageNumber] = useState(1);
+  const month = ("0" + (new Date().getMonth() + 1)).slice(-2);
+  const year = new Date().getFullYear();
+  const CV_string = `CV Senior Frontend Developer Oleg Suvorov ${month}.${year} G${fileLength}.pdf`;
+  const isPaginated = fileLength > 1;
 
-  return (
+  useEffect(() => {
+    (async () => {
+      try {
+        const module = await import(`../../CVs/cv${fileLength}.pdf`);
+        const fileUrl = module.default;
+        setCVFile(fileUrl);
+      } catch (e) {
+        console.error(e);
+      }
+    })();
+  }, [fileLength]);
+
+  const onDocumentLoadSuccess = ({ numPages: nextNumPages }) => {
+    setTotalPages(nextNumPages);
+  };
+
+  const onPageChange = (e, p) => {
+    const prevY = window.scrollY;
+    setPageNumber(p);
+    setTimeout(() => {
+      window.scroll(0, prevY);
+    }, 100);
+  };
+
+  return CVFile ? (
     <>
       <Button
         startIcon={<DownloadIcon />}
@@ -25,9 +53,22 @@ export function CV() {
       >
         Download "{CV_string}"
       </Button>
-      <Document file={CVFile}>
-        <Page pageNumber={1} size="A4" />
+      <Document file={CVFile} onLoadSuccess={onDocumentLoadSuccess}>
+        <Page pageNumber={pageNumber} size="A4" />
       </Document>
+      {isPaginated && !!totalPages && (
+        <Stack alignItems="center" sx={{ mt: 2 }}>
+          <Pagination
+            color="primary"
+            onChange={onPageChange}
+            count={totalPages}
+            showFirstButton
+            showLastButton
+          />
+        </Stack>
+      )}
     </>
+  ) : (
+    <>Loading...</>
   );
 }

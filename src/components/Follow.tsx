@@ -1,5 +1,5 @@
 import React from "react";
-import { List, Typography } from "@mui/material";
+import { List } from "@mui/material";
 import EmailIcon from "@mui/icons-material/Email";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -10,13 +10,12 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import CoPresentIcon from "@mui/icons-material/CoPresent";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import { GetListItemButton } from "./GetListItemButton";
+import Title from "./common/Title";
 
 export function Follow() {
   return (
     <>
-      <Typography variant="h4" color="primary" sx={{ flexGrow: 1 }}>
-        Add • connect • follow me:
-      </Typography>
+      <Title>Add • connect • follow me:</Title>
       <List component="nav">
         <GetListItemButton
           URL="olegsuv@gmail.com"

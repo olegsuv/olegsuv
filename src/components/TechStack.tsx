@@ -1,5 +1,6 @@
 import React from "react";
-import { Chip, Stack, Typography } from "@mui/material";
+import { Chip, Stack } from "@mui/material";
+import Title from "./common/Title";
 
 function CustomChip({ label, href }) {
   return (
@@ -10,9 +11,7 @@ function CustomChip({ label, href }) {
 export function TechStack() {
   return (
     <>
-      <Typography variant="h4" color="primary" sx={{ flexGrow: 1 }}>
-        Tech stack of this website:
-      </Typography>
+      <Title>Tech stack of this website:</Title>
       <Stack direction="row" flexWrap="wrap" spacing={0} sx={{ gap: 2, mt: 2 }}>
         <CustomChip href="https://reactjs.org/" label="React" />
         <CustomChip
