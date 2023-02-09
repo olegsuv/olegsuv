@@ -33,8 +33,46 @@ function a11yProps(index: number) {
   };
 }
 
+const cv1description = (
+  <>
+    Perfectly fits for a 7-second check (average time of CV's view according to{" "}
+    <a
+      href="https://standout-cv.com/how-long-recruiters-spend-looking-at-cv"
+      target="_blank"
+      rel="noreferrer"
+    >
+      study
+    </a>
+    .
+  </>
+);
+
+const cv2description = (
+  <>
+    Perfectly fits Applicant Tracking System (ATS) - the tool, used by most
+    hiring managers to evaluate a candidate’s document.
+  </>
+);
+
+const cv7description = (
+  <>
+    Scandinavian companies requested the extended version with the "most
+    professional photo" inside. It contains all the information from my LinkedIn
+    profile, including comprehensive project descriptions.
+  </>
+);
+
+const CVs = [
+  {
+    pages: 1,
+    description: cv1description,
+  },
+  { pages: 2, description: cv2description },
+  { pages: 7, description: cv7description },
+];
+
 export default function CVTabs() {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(1);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -48,21 +86,19 @@ export default function CVTabs() {
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          <Tab label="1-page CV" {...a11yProps(0)} />
-          {/*<Tab label="2-pages CV" {...a11yProps(1)} />*/}
-          <Tab label="7-pages CV" {...a11yProps(1)} />
+          {CVs.map((cv, index) => (
+            <Tab
+              label={`${cv.pages}-page${cv.pages > 1 ? "s" : ""} CV`}
+              {...a11yProps(index)}
+            />
+          ))}
         </Tabs>
       </Box>
-      <TabPanel value={value} index={0}>
-        <CV fileLength={1} />
-      </TabPanel>
-      {/*<TabPanel value={value} index={1}>
-        <CV fileLength={2} />
-        Item Two
-      </TabPanel>*/}
-      <TabPanel value={value} index={1}>
-        <CV fileLength={7} />
-      </TabPanel>
+      {CVs.map((cv, index) => (
+        <TabPanel value={value} index={index}>
+          <CV fileLength={cv.pages} description={cv.description} />
+        </TabPanel>
+      ))}
     </>
   );
 }

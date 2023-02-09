@@ -1,11 +1,11 @@
-import { Button, Link, Pagination, Stack } from "@mui/material";
+import { Button, Link, Pagination, Stack, Typography } from "@mui/material";
 import DownloadIcon from "@mui/icons-material/Download";
 import React, { useEffect, useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import "./CV.scss";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-export function CV({ fileLength }) {
+export function CV({ fileLength, description }) {
   const [CVFile, setCVFile] = useState(null);
   const [totalPages, setTotalPages] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
@@ -40,6 +40,7 @@ export function CV({ fileLength }) {
 
   return CVFile ? (
     <>
+      <Typography sx={{ mb: 1 }}>{description}</Typography>
       <Button
         startIcon={<DownloadIcon />}
         href={CVFile}
