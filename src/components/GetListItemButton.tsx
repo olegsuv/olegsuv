@@ -7,24 +7,28 @@ import {
 } from "@mui/material";
 
 interface GetListItemButtonProps {
-  URL: string;
+  primary: string;
+  secondary?: string;
   Icon: React.ComponentType<SvgIconProps>;
   protocol?: string;
 }
 
 export function GetListItemButton({
-  URL,
+  primary,
+  secondary,
   Icon,
   protocol,
 }: GetListItemButtonProps) {
-  const openLink = protocol ? `${protocol}:${URL}` : `https://www.${URL}/`;
+  const openLink = protocol
+    ? `${protocol}:${primary}`
+    : `https://www.${primary}/`;
 
   return (
     <ListItemButton onClick={() => window.open(openLink)}>
       <ListItemIcon>
         <Icon />
       </ListItemIcon>
-      <ListItemText primary={URL} />
+      <ListItemText primary={primary} secondary={secondary || null} />
     </ListItemButton>
   );
 }

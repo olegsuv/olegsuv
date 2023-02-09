@@ -15,27 +15,33 @@ export function Tasks() {
       <Title>Demo of solved test tasks:</Title>
       <List component="nav">
         <GetListItemButton
-          URL="github.com/olegsuv/react-checkers"
+          primary="github.com/olegsuv/react-checkers"
+          secondary="Test task for Tesla"
           Icon={GridViewIcon}
         />
         <GetListItemButton
-          URL="github.com/olegsuv/react-photo-slider"
+          primary="github.com/olegsuv/react-photo-slider"
+          secondary="Test task for Talarian"
           Icon={CollectionsIcon}
         />
         <GetListItemButton
-          URL="github.com/olegsuv/react-auto-complete"
+          primary="github.com/olegsuv/react-auto-complete"
+          secondary="Test task for Deel"
           Icon={InputIcon}
         />
         <GetListItemButton
-          URL="github.com/olegsuv/react-movie-management"
+          primary="github.com/olegsuv/react-movie-management"
+          secondary="Test task for CleverTech"
           Icon={LocalMoviesIcon}
         />
         <GetListItemButton
-          URL="github.com/olegsuv/react-todo-list"
+          primary="github.com/olegsuv/react-todo-list"
+          secondary="Test task for Fasta"
           Icon={FormatListBulletedIcon}
         />
         <GetListItemButton
-          URL="github.com/olegsuv/jqTree-generator"
+          primary="github.com/olegsuv/jqTree-generator"
+          secondary="Test task for InfrontX"
           Icon={AccountTreeIcon}
         />
       </List>
