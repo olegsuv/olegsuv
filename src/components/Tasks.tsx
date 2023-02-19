@@ -5,7 +5,6 @@ import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import GridViewIcon from "@mui/icons-material/GridView";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import CollectionsIcon from "@mui/icons-material/Collections";
-import LocalMoviesIcon from "@mui/icons-material/LocalMovies";
 import { GetListItemButton } from "./GetListItemButton";
 import Title from "./common/Title";
 
@@ -28,11 +27,6 @@ export function Tasks() {
           primary="github.com/olegsuv/react-auto-complete"
           secondary="Test task for Deel"
           Icon={InputIcon}
-        />
-        <GetListItemButton
-          primary="github.com/olegsuv/react-movie-management"
-          secondary="Test task for CleverTech"
-          Icon={LocalMoviesIcon}
         />
         <GetListItemButton
           primary="github.com/olegsuv/react-todo-list"
