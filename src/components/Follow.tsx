@@ -21,7 +21,7 @@ export function Follow() {
           primary="olegsuv@gmail.com"
           secondary="Primary way to communicate"
           Icon={EmailIcon}
-          protocol="mailto"
+          protocol="mailto:"
         />
         <GetListItemButton
           primary="linkedin.com/in/olegsuv"

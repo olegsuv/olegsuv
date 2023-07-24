@@ -20,7 +20,7 @@ export function GetListItemButton({
   protocol,
 }: GetListItemButtonProps) {
   const openLink = protocol
-    ? `${protocol}:${primary}`
+    ? `${protocol}${primary}`
     : `https://www.${primary}/`;
 
   return (

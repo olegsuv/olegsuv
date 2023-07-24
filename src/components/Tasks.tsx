@@ -1,5 +1,10 @@
 import React from "react";
-import { List } from "@mui/material";
+import {
+  List,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+} from "@mui/material";
 import InputIcon from "@mui/icons-material/Input";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import GridViewIcon from "@mui/icons-material/GridView";
@@ -7,12 +12,24 @@ import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import CollectionsIcon from "@mui/icons-material/Collections";
 import { GetListItemButton } from "./GetListItemButton";
 import Title from "./common/Title";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import TelegramIcon from "@mui/icons-material/Telegram";
 
 export function Tasks() {
   return (
     <>
       <Title>Demo of solved test tasks:</Title>
       <List component="nav">
+        <ListItemButton onClick={() => (window.location.href = "/messengers")}>
+          <ListItemIcon>
+            <WhatsAppIcon />
+            <TelegramIcon />
+          </ListItemIcon>
+          <ListItemText
+            primary="Messengers link generator"
+            secondary="Since applications are not having New Chat buttons"
+          />
+        </ListItemButton>
         <GetListItemButton
           primary="github.com/olegsuv/react-checkers"
           secondary="Test task for Tesla"
