@@ -5,13 +5,13 @@ import { Document, Page, pdfjs } from "react-pdf";
 import "./CV.scss";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
+const fileChangedDate = "08.2023";
+
 export function CV({ fileLength, description }) {
   const [CVFile, setCVFile] = useState(null);
   const [totalPages, setTotalPages] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
-  const month = ("0" + (new Date().getMonth() + 1)).slice(-2);
-  const year = new Date().getFullYear();
-  const CV_string = `CV Senior Frontend Developer Oleg Suvorov ${month}.${year} G${fileLength}.pdf`;
+  const CV_string = `CV Senior Frontend Developer Oleg Suvorov ${fileChangedDate} G${fileLength}.pdf`;
   const isPaginated = fileLength > 1;
 
   useEffect(() => {
@@ -40,7 +40,7 @@ export function CV({ fileLength, description }) {
 
   return CVFile ? (
     <>
-      <Typography sx={{ mb: 1 }}>{description}</Typography>
+      {description && <Typography sx={{ mb: 1 }}>{description}</Typography>}
       <Button
         startIcon={<DownloadIcon />}
         href={CVFile}

@@ -22,8 +22,8 @@ export function About() {
       <Grid item sm={8}>
         <Title>Thank you for visiting my home page!</Title>
         <Typography>
-          Here you can download the latest versions of CVs (different sizes),
-          get contact links, and check projects, including live demo links.
+          Here you can download the latest versions of CV, get contact links,
+          and check projects, including live demo links.
         </Typography>
       </Grid>
     </Grid>
