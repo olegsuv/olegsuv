@@ -11,7 +11,7 @@ export function CV({ fileLength, description }) {
   const [CVFile, setCVFile] = useState(null);
   const [totalPages, setTotalPages] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
-  const CV_string = `CV Senior Frontend Developer Oleg Suvorov ${fileChangedDate} G${fileLength}.pdf`;
+  const CV_string = `CV Front End Lead Oleg Suvorov ${fileChangedDate} G${fileLength}.pdf`;
   const isPaginated = fileLength > 1;
 
   useEffect(() => {
