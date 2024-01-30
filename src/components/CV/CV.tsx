@@ -1,13 +1,18 @@
 import { Button, Link, Pagination, Stack, Typography } from "@mui/material";
 import DownloadIcon from "@mui/icons-material/Download";
-import React, { useEffect, useState } from "react";
+import React, { ReactElement, useEffect, useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import "./CV.scss";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-const fileChangedDate = "08.2023";
+const fileChangedDate = "01.2024";
 
-export function CV({ fileLength, description }) {
+interface Props {
+  fileLength: number;
+  description?: ReactElement;
+}
+
+export function CV({ fileLength, description }: Props) {
   const [CVFile, setCVFile] = useState(null);
   const [totalPages, setTotalPages] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
@@ -30,7 +35,7 @@ export function CV({ fileLength, description }) {
     setTotalPages(nextNumPages);
   };
 
-  const onPageChange = (e, p) => {
+  const onPageChange = (_, p) => {
     const prevY = window.scrollY;
     setPageNumber(p);
     setTimeout(() => {
