@@ -27,7 +27,7 @@ export function Tasks() {
           </ListItemIcon>
           <ListItemText
             primary="Messengers link generator"
-            secondary="Since applications are not having New Chat buttons"
+            secondary="WhatsApp / Telegram / Viber buttons"
           />
         </ListItemButton>
         <GetListItemButton

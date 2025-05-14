@@ -5,8 +5,6 @@ import { Document, Page, pdfjs } from "react-pdf";
 import "./CV.scss";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-const fileChangedDate = "01.2024";
-
 interface Props {
   fileLength: number;
   description?: ReactElement;
@@ -16,7 +14,7 @@ export function CV({ fileLength, description }: Props) {
   const [CVFile, setCVFile] = useState(null);
   const [totalPages, setTotalPages] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
-  const CV_string = `CV Front End Lead Oleg Suvorov ${fileChangedDate} G${fileLength}.pdf`;
+  const CV_string = `CV Senior_Lead React Frontend Developer Oleh Suvorov 05.2025.pdf`;
   const isPaginated = fileLength > 1;
 
   useEffect(() => {
@@ -60,7 +58,7 @@ export function CV({ fileLength, description }: Props) {
         Download "{CV_string}"
       </Button>
       <Document file={CVFile} onLoadSuccess={onDocumentLoadSuccess}>
-        <Page pageNumber={pageNumber} size="A4" />
+        <Page pageNumber={pageNumber} width={595} />
       </Document>
       {isPaginated && !!totalPages && (
         <Stack alignItems="center" sx={{ mt: 2 }}>
@@ -68,8 +66,6 @@ export function CV({ fileLength, description }: Props) {
             color="primary"
             onChange={onPageChange}
             count={totalPages}
-            showFirstButton
-            showLastButton
           />
         </Stack>
       )}

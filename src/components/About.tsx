@@ -6,7 +6,7 @@ import Title from "./common/Title";
 
 export function About() {
   return (
-    <Grid container spacing={4} sx={{ mb: 4 }}>
+    <Grid container spacing={4} sx={{ mb: 2, width: 595 }}>
       <Grid item sm={4}>
         <Box
           component="img"
@@ -14,6 +14,7 @@ export function About() {
             margin: "auto",
             maxHeight: 160,
             maxWidth: 160,
+            borderRadius: 1,
           }}
           alt="Oleg Suvorov Photo"
           src={photo}
@@ -22,8 +23,8 @@ export function About() {
       <Grid item sm={8}>
         <Title>Thank you for visiting my home page!</Title>
         <Typography>
-          Here you can download the latest versions of CV, get contact links,
-          and check projects, including live demo links.
+          Here you can download the latest version of CV, <a href="https://www.calendly.com/olegsuv/">book a call with me</a>, <a
+          href="https://github.com/olegsuv/">check test projects</a>. Don't forger to try <a href="/messengers">buttons for messengers</a> ;-)
         </Typography>
       </Grid>
     </Grid>

@@ -10,7 +10,7 @@ function CustomChip({ label, href }) {
 
 export function TechStack() {
   return (
-    <>
+    <Stack sx={{mb: 2}}>
       <Title>Tech stack of this website:</Title>
       <Stack direction="row" flexWrap="wrap" spacing={0} sx={{ gap: 2, mt: 2 }}>
         <CustomChip href="https://reactjs.org/" label="React" />
@@ -29,6 +29,6 @@ export function TechStack() {
         <CustomChip href="https://prettier.io/" label="Prettier" />
         <CustomChip href="https://sass-lang.com/" label="SCSS" />
       </Stack>
-    </>
+    </Stack>
   );
 }
