@@ -1,7 +1,8 @@
 ### Oleh Suvorov — Frontend Lead, Valencia
 
-Sixteen years in web development, the last three leading frontend teams. These days coding agents write most
-of the lines and I own the rest: architecture, boundaries, review, and shipping something cheap and boring to run.
+Sixteen years in web development; the whole frontend of [Concryt](https://concryt.io/), a payments fintech, solo.
+AI-native engineering: coding agents (Claude Code) write most of the lines, I own the spec, the architecture and the
+boundaries — agent harnesses, MCP servers, agentic RAG, spec-driven development — and review everything that ships.
 
 - **CV:** [olegsuv.dev](https://olegsuv.dev) ([PDF](https://olegsuv.dev/oleh-suvorov-cv.pdf))
 - **Live project:** [Ігротека](https://boardgames.olegsuv.dev) — a board-game library for friends on Netlify Functions and Blobs, with Telegram sign-in

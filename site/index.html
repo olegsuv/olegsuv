@@ -3,10 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Oleh Suvorov — Frontend Lead</title>
-<meta name="description" content="Oleh Suvorov, Frontend Lead in Valencia, Spain. 16 years of web development; leads frontend teams and builds end to end with AI coding agents.">
-<meta property="og:title" content="Oleh Suvorov — Frontend Lead">
-<meta property="og:description" content="16 years of web development; leads frontend teams and builds end to end with AI coding agents.">
+<title>Oleh Suvorov — Frontend Lead · AI agents, MCP, RAG</title>
+<meta name="description" content="Oleh Suvorov — Frontend Lead in Valencia, Spain. Owns the whole frontend of a payments fintech solo; builds with AI coding agents: agent harnesses, MCP servers, agentic RAG, spec-driven development with Claude Code. React, TypeScript, Node.js.">
+<link rel="canonical" href="https://olegsuv.dev/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Oleh Suvorov",
+  "alternateName": "Oleg Suvorov",
+  "url": "https://olegsuv.dev/",
+  "email": "mailto:olegsuv@gmail.com",
+  "jobTitle": "Frontend Lead",
+  "worksFor": { "@type": "Organization", "name": "Concryt", "url": "https://concryt.io/" },
+  "homeLocation": { "@type": "Place", "name": "Valencian Community, Spain" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "National Metallurgical Academy of Ukraine" },
+  "knowsLanguage": ["uk", "en", "es"],
+  "knowsAbout": ["Frontend architecture", "React", "TypeScript", "Node.js", "AI coding agents", "Claude Code", "Agent harness", "Model Context Protocol (MCP)", "Retrieval-augmented generation (RAG)", "Agentic retrieval", "Spec-driven development", "Context engineering", "LLM structured output", "Prompt injection defense", "Fintech payments", "Cloudflare", "Netlify"],
+  "sameAs": ["https://www.linkedin.com/in/olegsuv", "https://github.com/olegsuv", "https://t.me/olegsuv_ua", "https://archive.olegsuv.dev/"]
+}
+</script>
+<meta property="og:title" content="Oleh Suvorov — Frontend Lead · AI agents, MCP, RAG">
+<meta property="og:description" content="Owns the whole frontend of a payments fintech solo; builds with AI coding agents — harnesses, MCP servers, agentic RAG, spec-driven development.">
 <meta property="og:url" content="https://olegsuv.dev/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f3a5f'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-size='17' fill='%23fff'%3EOS%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -90,11 +108,11 @@ footer{margin-top:32px;padding-top:14px;border-top:1px solid var(--line);font-si
   <header>
     <div>
       <h1>Oleh Suvorov</h1>
-      <div class="role">Frontend Lead · builds end to end with AI coding agents</div>
+      <div class="role">Frontend Lead · AI-native engineering: agents, MCP, RAG</div>
       <a class="pdf noprint" href="/oleh-suvorov-cv.pdf" download>Download PDF ↓</a>
     </div>
     <ul class="contact">
-      <li>Valencian Community, Spain · residence, work permit</li>
+      <li>Valencia, Spain · residence and work permit</li>
       <li><a href="mailto:olegsuv@gmail.com">olegsuv@gmail.com</a></li>
       <li><a href="https://www.linkedin.com/in/olegsuv">linkedin.com/in/olegsuv</a></li>
       <li><a href="https://github.com/olegsuv">github.com/olegsuv</a></li>
@@ -103,15 +121,16 @@ footer{margin-top:32px;padding-top:14px;border-top:1px solid var(--line);font-si
   </header>
 
   <h2>Summary</h2>
-  <p class="lead">Sixteen years in web development, the last three leading frontend teams. Fintech, marketplaces,
-  education, sport and media; products with millions of users, and products grown from an empty repository
-  to release. I set up how a team ships — architecture, review, CI, the conversation with design and
-  product — and I still write and read code every day.</p>
+  <p class="lead">Sixteen years in web development, the last three leading frontend — now owning the entire
+  frontend of a payments fintech on my own. Fintech, marketplaces, education, sport and media; products with
+  millions of users, and products grown from an empty repository to release. I set up how software ships —
+  architecture, review, CI, the conversation with design and product — and I still write and read code every day.</p>
 
   <div class="now">
     <strong>How I work in 2026.</strong> Coding agents (Claude Code) write most of the lines; my job moved to
     the parts that decide whether the result is any good:
     <ul>
+      <li>spec first: a written spec and plan (SPEC.md, PLANS.md, CLAUDE.md) before the agent touches code, and context engineering so it has what it needs and nothing it shouldn't;</li>
       <li>the architecture and the boundaries — what the system may do, what it must never do, where data lives;</li>
       <li>reading every change before it ships, and testing it the way a user would, not only the way the code expects;</li>
       <li>keeping it cheap and boring to run: no servers where a static page will do, no tokens spent when nothing changed.</li>
@@ -127,10 +146,12 @@ footer{margin-top:32px;padding-top:14px;border-top:1px solid var(--line);font-si
     <ul>
       <li>Two WhatsApp accounts and Telegram archived into SQLite; voice notes transcribed locally on the
         integrated GPU (Vulkan), no audio leaves the house.</li>
-      <li>Read-only MCP servers let an AI assistant search years of chats; sending is off by default, limited to
-        saved contacts, rate-limited and logged, because every message an assistant reads is someone else's input.</li>
-      <li>A triage board fills itself: a headless agent runs only when private chats go quiet after new messages,
-        sorts what needs a reply, and never retells what I wrote myself. Past events clear away on their own.</li>
+      <li>MCP servers give an AI assistant agentic retrieval (RAG through tool calls over SQLite, no vector store)
+        across years of chats and voice transcripts. Sending is off by default, limited to saved contacts,
+        rate-limited and logged: every message an agent reads is untrusted input, so prompt injection is designed for.</li>
+      <li>An agent harness fills a triage board: headless Claude Code runs only when private chats go quiet after new
+        messages, with an allowlist of tools, read-only sources and its own MCP server as the only way to write.
+        It never retells what I wrote myself; past events clear away without spending a token.</li>
     </ul>
   </section>
 
@@ -142,8 +163,9 @@ footer{margin-top:32px;padding-top:14px;border-top:1px solid var(--line);font-si
         key-value store; concurrent edits are safe through ETag-conditional writes.</li>
       <li>Sign-in through a Telegram bot: a one-time code, the bot's webhook, a signed session — friends own their
         entries without passwords.</li>
-      <li>A worker on the home server identifies new games and writes their descriptions; it asks the site for free
-        and runs a model only when there is something new, once per batch.</li>
+      <li>An LLM enrichment pipeline identifies new games and writes their descriptions: structured JSON output,
+        validation, retries with a cap, covers and ratings from the BoardGameGeek API. It asks the site for free and
+        runs a model only when there is something new, once per batch.</li>
     </ul>
   </section>
 
@@ -161,8 +183,9 @@ footer{margin-top:32px;padding-top:14px;border-top:1px solid var(--line);font-si
   <h2>Experience</h2>
 
   <div class="job">
-    <h3>Frontend Lead · NDA (fintech), remote</h3><div class="when">03/2024 – present</div>
-    <div class="body">Finance software for processing bank transactions: a React SPA on Vite, Ant Design and Styled Components.</div>
+    <h3>Frontend Lead · <a href="https://concryt.io/">Concryt</a> (payments fintech), remote</h3><div class="when">03/2024 – present</div>
+    <div class="body">The company's whole frontend, solo: the web interfaces of a payments platform for businesses —
+      card acquiring, alternative payment methods, bank transfers and payouts. React SPA on Vite, Ant Design, Styled Components.</div>
   </div>
   <div class="job">
     <h3>Frontend Lead · 1000Farmacie, remote</h3><div class="when">02/2023 – 02/2024</div>
@@ -193,18 +216,24 @@ footer{margin-top:32px;padding-top:14px;border-top:1px solid var(--line);font-si
 
   <div class="two">
     <div>
+      <h2>AI engineering</h2>
+      <div class="tags">
+        <span>Claude Code</span><span>Agent harnesses</span><span>MCP servers</span><span>Agentic RAG</span>
+        <span>Spec-driven development</span><span>Context engineering</span><span>Structured output</span>
+        <span>Tool allowlists</span><span>Prompt-injection boundaries</span><span>LLM cost control</span>
+      </div>
       <h2>Skills</h2>
       <div class="tags">
         <span>TypeScript</span><span>React</span><span>Next.js</span><span>Node.js</span><span>Vite</span><span>Webpack</span>
         <span>Redux</span><span>Ant Design</span><span>Material UI</span><span>Styled Components</span><span>SCSS</span>
         <span>Jest</span><span>CI/CD</span><span>Docker</span><span>Cloudflare</span><span>Netlify</span>
-        <span>SQLite</span><span>MCP</span><span>Claude Code</span><span>GA4 / GTM</span>
+        <span>SQLite</span><span>GA4 / GTM</span>
       </div>
     </div>
     <div>
       <h2>Education & languages</h2>
       <p>Master's degree, Computer Science — National Metallurgical Academy of Ukraine.</p>
-      <p>Ukrainian — native · English — professional · Spanish — elementary.</p>
+      <p>Ukrainian — native · English — professional · Spanish — conversational.</p>
     </div>
   </div>
 
