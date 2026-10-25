@@ -11,6 +11,17 @@
   status = 301
   force = true
 
+# Addresses from the old React site live on in the archive.
+[[redirects]]
+  from = "/messengers"
+  to = "https://archive.olegsuv.dev/messengers"
+  status = 301
+
+[[redirects]]
+  from = "/static/*"
+  to = "https://archive.olegsuv.dev/static/:splat"
+  status = 301
+
 [[headers]]
   for = "/*"
   [headers.values]
