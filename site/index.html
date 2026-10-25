@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Oleh Suvorov — Frontend Lead</title>
+<meta name="description" content="Oleh Suvorov, Frontend Lead in Valencia, Spain. 16 years of web development; leads frontend teams and builds end to end with AI coding agents.">
+<meta property="og:title" content="Oleh Suvorov — Frontend Lead">
+<meta property="og:description" content="16 years of web development; leads frontend teams and builds end to end with AI coding agents.">
+<meta property="og:url" content="https://olegsuv.dev/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f3a5f'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-size='17' fill='%23fff'%3EOS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap">
+<style>
+/* A CV first: one column that reads top to bottom on a phone and prints to two A4 pages. */
+:root{
+  --ink:#16202c; --muted:#5a6573; --line:#dfe3e8; --bg:#fbfbf9; --paper:#ffffff;
+  --accent:#1f3a5f; --accent-soft:#e8eef6; --tag:#f1f3f5;
+  --serif:"Source Serif 4",Georgia,serif; --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ink:#e6eaef; --muted:#9aa5b1; --line:#2a333d; --bg:#11161c; --paper:#161d25;
+  --accent:#8fb3e0; --accent-soft:#1c2a3a; --tag:#1f2830; color-scheme:dark}}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 var(--sans);-webkit-font-smoothing:antialiased;padding:32px 16px 48px}
+a{color:var(--accent);text-underline-offset:2px}
+.cv{max-width:820px;margin:0 auto;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:40px 48px}
+header{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;border-bottom:2px solid var(--ink);padding-bottom:20px}
+h1{font:600 34px/1.1 var(--serif);margin:0;letter-spacing:-.01em}
+.role{font-size:17px;color:var(--muted);margin-top:6px}
+.contact{list-style:none;margin:0;padding:0;font-size:14px;text-align:right;line-height:1.75}
+.contact a{text-decoration:none}
+.contact a:hover{text-decoration:underline}
+h2{font:600 13px/1 var(--sans);text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin:30px 0 12px}
+p{margin:0 0 10px}
+.lead{font-size:16px}
+.now{background:var(--accent-soft);border-radius:10px;padding:16px 20px}
+.now ul{margin:6px 0 0;padding-left:18px}
+.now li{margin:4px 0}
+.case{border-top:1px solid var(--line);padding:14px 0 6px}
+.case:first-of-type{border-top:0;padding-top:0}
+.case h3,.job h3{font-size:16px;margin:0;font-weight:600}
+.case .sub,.job .sub{color:var(--muted);font-size:14px;margin:2px 0 6px}
+.case ul,.job ul{margin:4px 0 0;padding-left:18px}
+.case li,.job li{margin:3px 0}
+.who{font-size:13.5px;color:var(--muted);margin-top:6px}
+.job{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 16px;padding:10px 0;border-top:1px solid var(--line)}
+.job:first-of-type{border-top:0}
+.job .when{font-variant-numeric:tabular-nums;color:var(--muted);font-size:14px;white-space:nowrap}
+.job .body{grid-column:1/-1}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{background:var(--tag);border-radius:6px;padding:2px 9px;font-size:13px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
+footer{margin-top:32px;padding-top:14px;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.pdf{display:inline-block;margin-top:10px;font-size:14px;font-weight:600}
+@media (max-width:640px){
+  body{padding:0}
+  .cv{border:0;border-radius:0;padding:24px 16px}
+  .contact{text-align:left}
+  .two{grid-template-columns:1fr}
+  .job{grid-template-columns:1fr}
+}
+@media print{
+  @page{size:A4;margin:12mm 13mm}
+  body{background:#fff;padding:0;font-size:9.6pt;line-height:1.42;color:#000}
+  h1{font-size:26px}
+  .role{font-size:14px}
+  .lead{font-size:10pt}
+  h2{margin:16px 0 7px}
+  header{padding-bottom:12px;flex-wrap:nowrap}
+  .contact{line-height:1.55}
+  .now{padding:10px 14px}
+  .case{padding:8px 0 2px}
+  .job{padding:6px 0}
+  .tags span{font-size:8.5pt;padding:1px 7px}
+  footer{margin-top:16px}
+  .cv{border:0;padding:0;max-width:none}
+  .pdf,.noprint{display:none}
+  .case,.job{break-inside:avoid}
+  h2{break-after:avoid}
+  a{color:#000;text-decoration:none}
+  .now{background:#f2f5f9}
+}
+</style>
+</head>
+<body>
+<main class="cv">
+  <header>
+    <div>
+      <h1>Oleh Suvorov</h1>
+      <div class="role">Frontend Lead · builds end to end with AI coding agents</div>
+      <a class="pdf noprint" href="/oleh-suvorov-cv.pdf" download>Download PDF ↓</a>
+    </div>
+    <ul class="contact">
+      <li>Valencian Community, Spain · residence, work permit</li>
+      <li><a href="mailto:olegsuv@gmail.com">olegsuv@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/olegsuv">linkedin.com/in/olegsuv</a></li>
+      <li><a href="https://github.com/olegsuv">github.com/olegsuv</a></li>
+      <li><a href="https://t.me/olegsuv_ua">t.me/olegsuv_ua</a> · <a href="https://calendly.com/olegsuv/">book a call</a></li>
+    </ul>
+  </header>
+
+  <h2>Summary</h2>
+  <p class="lead">Sixteen years in web development, the last three leading frontend teams. Fintech, marketplaces,
+  education, sport and media; products with millions of users, and products grown from an empty repository
+  to release. I set up how a team ships — architecture, review, CI, the conversation with design and
+  product — and I still write and read code every day.</p>
+
+  <div class="now">
+    <strong>How I work in 2026.</strong> Coding agents (Claude Code) write most of the lines; my job moved to
+    the parts that decide whether the result is any good:
+    <ul>
+      <li>the architecture and the boundaries — what the system may do, what it must never do, where data lives;</li>
+      <li>reading every change before it ships, and testing it the way a user would, not only the way the code expects;</li>
+      <li>keeping it cheap and boring to run: no servers where a static page will do, no tokens spent when nothing changed.</li>
+    </ul>
+    The projects below were built this way, in days rather than weeks.
+  </div>
+
+  <h2>Selected work, 2026</h2>
+
+  <section class="case">
+    <h3>Messenger archive and a daily triage board</h3>
+    <div class="sub">Personal system on a home server · Node.js, SQLite, Docker, MCP, whisper.cpp</div>
+    <ul>
+      <li>Two WhatsApp accounts and Telegram archived into SQLite; voice notes transcribed locally on the
+        integrated GPU (Vulkan), no audio leaves the house.</li>
+      <li>Read-only MCP servers let an AI assistant search years of chats; sending is off by default, limited to
+        saved contacts, rate-limited and logged, because every message an assistant reads is someone else's input.</li>
+      <li>A triage board fills itself: a headless agent runs only when private chats go quiet after new messages,
+        sorts what needs a reply, and never retells what I wrote myself. Past events clear away on their own.</li>
+    </ul>
+  </section>
+
+  <section class="case">
+    <h3>Ігротека — a board-game library for a group of friends</h3>
+    <div class="sub"><a href="https://boardgames.olegsuv.dev/">boardgames.olegsuv.dev</a> · Netlify Functions and Blobs, Telegram bot, BoardGameGeek</div>
+    <ul>
+      <li>Moved from a spreadsheet rebuilt by an AI every hour to a static page with one function over a
+        key-value store; concurrent edits are safe through ETag-conditional writes.</li>
+      <li>Sign-in through a Telegram bot: a one-time code, the bot's webhook, a signed session — friends own their
+        entries without passwords.</li>
+      <li>A worker on the home server identifies new games and writes their descriptions; it asks the site for free
+        and runs a model only when there is something new, once per batch.</li>
+    </ul>
+  </section>
+
+  <section class="case">
+    <h3>Home infrastructure</h3>
+    <div class="sub">Ubuntu, Docker, Cloudflare Tunnel and Access, Tailscale, restic, Immich</div>
+    <ul>
+      <li>Home services published through Cloudflare Tunnel with no open ports; private pages behind Cloudflare
+        Access, with the app verifying Access's signed token itself rather than trusting a header.</li>
+      <li>Family photo library (Immich) with face recognition offloaded to a desktop GPU during the first import.</li>
+      <li>Backups to relatives' PCs through append-only repositories, so a compromised server cannot delete them.</li>
+    </ul>
+  </section>
+
+  <h2>Experience</h2>
+
+  <div class="job">
+    <h3>Frontend Lead · NDA (fintech), remote</h3><div class="when">03/2024 – present</div>
+    <div class="body">Finance software for processing bank transactions: a React SPA on Vite, Ant Design and Styled Components.</div>
+  </div>
+  <div class="job">
+    <h3>Frontend Lead · 1000Farmacie, remote</h3><div class="when">02/2023 – 02/2024</div>
+    <div class="body">Joined a fast-growing marketplace to lead the frontend: built the team's development process, fixed
+      the build at its foundations, upgraded the stack and SEO — with a measurable lift in revenue — and integrated
+      Google Ads, Meta Pixel, OptiMonk and Clerk personalisation.</div>
+  </div>
+  <div class="job">
+    <h3>Senior Frontend Developer · Svitla Systems, remote</h3><div class="when">01/2019 – 12/2022</div>
+    <div class="body"><ul>
+      <li><strong>CreateMe</strong> — a kiosk application for ordering in real time; kiosk and standalone modes for the US and UK rollout.</li>
+      <li><strong>Noodle</strong> — new features for an education platform, and a development process that made releases predictable.</li>
+      <li><strong>Clearstream / Deutsche Börse Group</strong> — a client-critical portal: automated upload and validation, security and performance work.</li>
+    </ul></div>
+  </div>
+  <div class="job">
+    <h3>Senior Frontend Developer · Infront X (formerly Omnigon), Kyiv / remote</h3><div class="when">02/2015 – 12/2018</div>
+    <div class="body"><ul>
+      <li><strong>PGA Tour</strong> — moved the site's components from jQuery to React; 99.8% unit-test coverage.</li>
+      <li><strong>Corebine CMS</strong> — led a small team building a CMS for sports websites from scratch.</li>
+    </ul></div>
+  </div>
+  <div class="job">
+    <h3>Frontend Web Developer · NOOSPHERE, Ukraine</h3><div class="when">09/2014 – 01/2015</div>
+    <div class="body">An internal single-page application for a support team; migrated it from Ext JS 4 to Ext JS 5.
+      Before that, freelance web development.</div>
+  </div>
+
+  <div class="two">
+    <div>
+      <h2>Skills</h2>
+      <div class="tags">
+        <span>TypeScript</span><span>React</span><span>Next.js</span><span>Node.js</span><span>Vite</span><span>Webpack</span>
+        <span>Redux</span><span>Ant Design</span><span>Material UI</span><span>Styled Components</span><span>SCSS</span>
+        <span>Jest</span><span>CI/CD</span><span>Docker</span><span>Cloudflare</span><span>Netlify</span>
+        <span>SQLite</span><span>MCP</span><span>Claude Code</span><span>GA4 / GTM</span>
+      </div>
+    </div>
+    <div>
+      <h2>Education & languages</h2>
+      <p>Master's degree, Computer Science — National Metallurgical Academy of Ukraine.</p>
+      <p>Ukrainian — native · English — professional · Spanish — elementary.</p>
+    </div>
+  </div>
+
+  <footer>
+    <span>Before AI coding tools: my site, CV and test tasks as of May 2025 — <a href="https://archive.olegsuv.dev/">archive.olegsuv.dev</a></span>
+    <span>olegsuv.dev</span>
+  </footer>
+</main>
+</body>
+</html>

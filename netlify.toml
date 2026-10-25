@@ -1,0 +1,18 @@
+# olegsuv.dev: a static CV, no build step. The React site it replaced is kept
+# at archive.olegsuv.dev (branch "archive").
+[build]
+  publish = "site"
+  command = ""
+
+# The .netlify.app address lands on olegsuv.dev (www already does, as a domain alias).
+[[redirects]]
+  from = "https://olegsuv.netlify.app/*"
+  to = "https://olegsuv.dev/:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
