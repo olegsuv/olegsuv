@@ -32,27 +32,27 @@ export function Tasks() {
         </ListItemButton>
         <GetListItemButton
           primary="github.com/olegsuv/react-checkers"
-          secondary="Test task for Tesla"
+          secondary="Test task for Tesla, Nov 2020"
           Icon={GridViewIcon}
         />
         <GetListItemButton
           primary="github.com/olegsuv/react-photo-slider"
-          secondary="Test task for Talarian"
+          secondary="Test task for Talarian, Jan 2023"
           Icon={CollectionsIcon}
         />
         <GetListItemButton
           primary="github.com/olegsuv/react-auto-complete"
-          secondary="Test task for Deel"
+          secondary="Test task for Deel, Nov 2022"
           Icon={InputIcon}
         />
         <GetListItemButton
           primary="github.com/olegsuv/react-todo-list"
-          secondary="Test task for Fasta"
+          secondary="Test task for Fasta, Dec 2022"
           Icon={FormatListBulletedIcon}
         />
         <GetListItemButton
           primary="github.com/olegsuv/jqTree-generator"
-          secondary="Test task for InfrontX"
+          secondary="Test task for Infront X, Jan 2015"
           Icon={AccountTreeIcon}
         />
       </List>

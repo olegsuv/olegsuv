@@ -23,7 +23,7 @@ export function About() {
       <Grid item sm={8}>
         <Title>Thank you for visiting my home page!</Title>
         <Typography>
-          Here you can download the latest version of CV, <a href="https://www.calendly.com/olegsuv/">book a call with me</a>, <a
+          Here you can download the latest version of CV, <a href="https://calendly.com/olegsuv/">book a call with me</a>, <a
           href="https://github.com/olegsuv/">check test projects</a>. Don't forger to try <a href="/messengers">buttons for messengers</a> ;-)
         </Typography>
       </Grid>

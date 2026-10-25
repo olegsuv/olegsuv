@@ -88,7 +88,7 @@ export function Generator() {
         </Box>
         <Box>
           <Button
-            href={`https:///t.me/+${value}`}
+            href={`https://t.me/+${value}`}
             startIcon={<TelegramIcon />}
             {...buttonProps("#0088cc")}
           >

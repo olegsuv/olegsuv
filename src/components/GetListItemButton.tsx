@@ -11,6 +11,7 @@ interface GetListItemButtonProps {
   secondary?: string;
   Icon: React.ComponentType<SvgIconProps>;
   protocol?: string;
+  href?: string;
 }
 
 export function GetListItemButton({
@@ -18,10 +19,9 @@ export function GetListItemButton({
   secondary,
   Icon,
   protocol,
+  href,
 }: GetListItemButtonProps) {
-  const openLink = protocol
-    ? `${protocol}${primary}`
-    : `https://www.${primary}/`;
+  const openLink = href ?? (protocol ? `${protocol}${primary}` : `https://${primary}`);
 
   return (
     <ListItemButton onClick={() => window.open(openLink)}>

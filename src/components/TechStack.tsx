@@ -13,16 +13,16 @@ export function TechStack() {
     <Stack sx={{mb: 2}}>
       <Title>Tech stack of this website:</Title>
       <Stack direction="row" flexWrap="wrap" spacing={0} sx={{ gap: 2, mt: 2 }}>
-        <CustomChip href="https://reactjs.org/" label="React" />
+        <CustomChip href="https://react.dev/" label="React" />
         <CustomChip
           href="https://www.npmjs.com/package/react-scripts"
           label="React Scripts"
         />
         <CustomChip
-          href="https://reactjs.org/docs/create-a-new-react-app.html"
+          href="https://create-react-app.dev/"
           label="React Create App"
         />
-        <CustomChip href="https://react-pdf.org/" label="React PDF" />
+        <CustomChip href="https://www.npmjs.com/package/react-pdf" label="React PDF" />
         <CustomChip href="https://www.typescriptlang.org/" label="Typescript" />
         <CustomChip href="https://mui.com/material-ui/" label="Material UI" />
         <CustomChip href="https://www.netlify.com/" label="Netlify" />

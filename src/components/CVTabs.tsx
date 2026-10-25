@@ -37,7 +37,7 @@ const cv1description = (
   <>
     Perfectly fits for a 7-second check (average time of CV's view according to{" "}
     <a
-      href="https://standout-cv.com/how-long-recruiters-spend-looking-at-cv"
+      href="https://standout-cv.com/stats/how-long-recruiters-spend-looking-at-cv"
       target="_blank"
       rel="noreferrer"
     >
