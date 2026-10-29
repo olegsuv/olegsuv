@@ -1,0 +1,23 @@
+# Oleh Suvorov — CV
+
+> Frontend Lead in Valencia, Spain (residence and work permit). Sixteen years in web development, the last three leading frontend; since 03/2024 owns the entire frontend of a payments fintech (Concryt) solo. Works with AI coding agents (Claude Code) the way a lead works with a team: spec first, the product and infrastructure calls his, every change at work reviewed.
+
+The CV is one HTML page, with the same content as a PDF. Contact: olegsuv@gmail.com.
+
+## The CV
+
+- [CV page](https://cv.olegsuv.dev/): summary, how he works with agents, personal projects built with Claude Code, experience, AI-native development, skills, education and languages
+- [CV as PDF](https://cv.olegsuv.dev/oleh-suvorov-cv.pdf): the same CV on two A4 pages
+
+## Personal projects (built with Claude Code from his spec)
+
+- Messenger archive and a daily triage board: WhatsApp and Telegram in SQLite on a home server, voice notes transcribed locally (whisper.cpp), MCP servers for agentic retrieval, a headless agent harness that drafts but never sends
+- [Ігротека](https://boardgames.olegsuv.dev/): a board-game library for friends — Telegram sign-in, an LLM enrichment pipeline with structured output and BoardGameGeek data
+- Home infrastructure: Docker, Cloudflare Tunnel and Access, Tailscale, restic backups to append-only repositories, Immich
+
+## Elsewhere
+
+- [olegsuv.dev](https://olegsuv.dev/): the lighter side — what he builds at home, with live demos
+- [LinkedIn](https://www.linkedin.com/in/olegsuv)
+- [GitHub](https://github.com/olegsuv)
+- [Telegram](https://t.me/olegsuv_ua)
