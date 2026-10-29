@@ -1,0 +1,9 @@
+// Deployed by Cloudflare Workers Builds on every push to master (as Netlify
+// did until 2026-10-29): the static files in site become Worker "site-cv" at
+// https://cv.olegsuv.dev. Netlify's rules live on as site/_headers and site/_redirects.
+{
+  "name": "site-cv",
+  "compatibility_date": "2026-10-01",
+  "assets": { "directory": "./site" },
+  "routes": [{ "pattern": "cv.olegsuv.dev", "custom_domain": true }]
+}
